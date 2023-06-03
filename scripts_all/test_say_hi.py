@@ -1,16 +1,13 @@
 import allure,pytest
 
 
-
 class TestSayHi(object):
-    @pytest.mark.xfail(False, reason="")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.feature("成功打印文字模板")
     def test_success(self):
         print("hi, success!!!")
         assert 1
 
-    @pytest.mark.xfail(True, reason="")
     @allure.feature("chagpt给的模板")
     def test_fail(self):
         with allure.step("Step 1"):
